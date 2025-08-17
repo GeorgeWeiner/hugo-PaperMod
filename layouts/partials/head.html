@@ -148,6 +148,10 @@
 
 {{- partial "extend_head.html" . -}}
 
+{{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- partial "google_analytics.html" . }}
