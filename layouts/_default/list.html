@@ -79,6 +79,7 @@
       {{- end }}
     </h2>
   </header>
+  <video class="entry-thumbnail" src="{{ "/blog/test/test-webm.webm" | relURL }}" height="453"></video>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
